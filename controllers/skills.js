@@ -5,7 +5,7 @@ module.exports = {
 };
 
 function index(req, res) {
-    res.render("todos/index", {
+    res.render("skills/index", {
         skills: Skill.getAll()
     });
 }
