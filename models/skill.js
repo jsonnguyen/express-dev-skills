@@ -1,12 +1,18 @@
 const skills = [
-    {id: 1254, name: "React"},
-    {id: 1891, name: "Django"},
-    {id: 1364, name: "Node"}
+    {id: 125459, name: "React", language: "Javascript"},
+    {id: 189125, name: "Django", language: "Python"},
+    {id: 136445, name: "Node", language: "Javascript"}
 ];
 
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    create
+}
+
+function create(skill) {
+    skill.id = Date.now() % 1000000;
+    skills.push(skill);
 }
 
 function getAll() {

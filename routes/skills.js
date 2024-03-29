@@ -4,7 +4,9 @@ var skillsCtrl = require("../controllers/skills")
 
 // GET all skills
 router.get("/", skillsCtrl.index);
-router.get("/:id", skillsCtrl.show)
+router.get("/new", skillsCtrl.new);
+router.get("/:id", skillsCtrl.show);
+router.post("/", skillsCtrl.create)
 
 
 module.exports = router;

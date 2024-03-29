@@ -3,7 +3,10 @@
       <% skills.forEach(function(s) { %>
         <li>
           <a href="/skills/<%= s.id %>"><%= s.name %></a>
+          -
+          <%= s.language %>
         </li>
       <% }); %>
     </ul>
+    <a href="/skills/new">Add Skill</a>
 <%- include('../partials/footer') %>
